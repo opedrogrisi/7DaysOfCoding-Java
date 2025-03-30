@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+    background-color: #404040;
+}
+
+.card__filmes{
+    display: grid;
+    margin: 1em 0em;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"poster__title poster__title poster__title"
+                         "poster__image poster__image poster__image";
+    grid-gap: 10px;
+    
+    
+
+}
+
+.poster__image{
+    width: 100%;
+    grid-area: poster__image;
+    justify-self: center;
+    text-align: center;
+}
+
+.poster__title{
+    grid-area: poster__title;
+    color: #dfdfdf;
+    font-size: 1em;
+    text-align: center;
+    font-family: Winky Sans;
+    font-weight: 700;
+}
+
+.poster__description{
+    grid-column: 2;
+    text-align: center;
+    color: #dfdfdf;
+    font-family: Winky Sans;
+    font-weight: 300;
+    margin-bottom: 1em;
+    text-wrap: nowrap;
+}
+
+.poster__paragraph{
+    color: #dfdfdf;
+    row-gap: 1em;
+ 
+}
+
+@media screen and (min-width: 1024px){
+   .poster__image{
+    width: 80%;
+   }
+}
