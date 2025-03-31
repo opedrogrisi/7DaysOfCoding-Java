@@ -26,12 +26,6 @@ public record Movie(String title, String urlImage, String rating, String release
         }
 
         for (String attribute : jsonMoviesAttributes) {
-            if (attribute.contains("poster_path")) {
-                urlList.add(getValue(attribute));
-            }
-        }
-
-        for (String attribute : jsonMoviesAttributes) {
             if (attribute.contains("vote_average")) {
                 ratingList.add(getValue(attribute));
             }
